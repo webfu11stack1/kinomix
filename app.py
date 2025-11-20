@@ -790,7 +790,10 @@ async def fmes(message: types.Message, state: FSMContext):
     # 🔹 Foydalanuvchilarni olish
     conn = sqlite3.connect('kinomix.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT DISTINCT user_id FROM userid")
+    cursor.execute(
+    "SELECT DISTINCT user_id FROM userid WHERE status='active' AND user_id > 0"
+)
+
     user_ids = [row[0] for row in cursor.fetchall()]
     conn.close()
 
@@ -1305,7 +1308,10 @@ async def send_inline(query: types.CallbackQuery, state: FSMContext):
 
     conn = sqlite3.connect("kinomix.db")
     cursor = conn.cursor()
-    cursor.execute("SELECT DISTINCT user_id FROM userid WHERE status='active'")
+    cursor.execute(
+    "SELECT DISTINCT user_id FROM userid WHERE status='active' AND user_id > 0"
+)
+
     user_ids = cursor.fetchall()
     conn.close()
 
@@ -1415,7 +1421,10 @@ async def izoh_pho(call: types.CallbackQuery, state: FSMContext):
 
     conn = sqlite3.connect('kinomix.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT DISTINCT user_id FROM userid WHERE status='active'")
+    cursor.execute(
+    "SELECT DISTINCT user_id FROM userid WHERE status='active' AND user_id > 0"
+)
+
     user_ids = cursor.fetchall()
     conn.close()
 
@@ -1524,7 +1533,10 @@ async def izoh_vid(call: types.CallbackQuery, state: FSMContext):
 
     conn = sqlite3.connect('kinomix.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT DISTINCT user_id FROM userid WHERE status='active'")
+    cursor.execute(
+    "SELECT DISTINCT user_id FROM userid WHERE status='active' AND user_id > 0"
+)
+
     user_ids = cursor.fetchall()
     conn.close()
 
