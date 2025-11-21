@@ -176,7 +176,7 @@ def is_premium(user_id):
     return True
 
 
-TOKEN = "8068158858:AAGUUO3iKkXtspjmw_r5CLiD2hWLK2JBE8g"
+TOKEN = "8068158858:AAEz741b5K_DKF267kdpyqWOZDzI5KrFaXU"
 bot = Bot(token=TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
