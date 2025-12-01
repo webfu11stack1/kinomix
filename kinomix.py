@@ -1833,7 +1833,7 @@ async def start(message: types.Message, state: FSMContext):
 @dp.callback_query_handler(lambda c: c.data == "premium_info",state="*")
 async def premium_info(callback_query: types.CallbackQuery,state:FSMContext):
     text = (
-        "🎟 <b>AR7 MOVIE Premium</b>\n\n"
+        "🎟 <b>KINOMIX REk Premium</b>\n\n"
         "💎 Premium obuna sizga quyidagi imkoniyatlarni beradi:\n"
         "• 📺 Kanallarga obunasiz kinolarni ko‘rish\n"
         "• 🎞 Yuqori sifatli kinolarni ko‘rish\n"
@@ -1864,9 +1864,9 @@ async def buy_premium(callback_query: types.CallbackQuery, state: FSMContext):
         "💰 Narxi: <b>12 000 so‘m</b>\n\n"
         "━━━━━━━━━━━━━━━━━━\n"
         "👤 <b>To‘lov qabul qiluvchi:</b>\n"
-        "   Asadbek Rahmonov\n\n"
+        "   Bobomurodov Afzalshoh\n\n"
         "💳 <b>Karta raqami:</b>\n"
-        "   <code>9860 0121 2777 4144</code>\n"
+        "   <code>5614 6819 1120 1816</code>\n"
         "━━━━━━━━━━━━━━━━━━\n\n"
         "✅ To‘lovni amalga oshirgandan so‘ng <b>chek rasmini shu yerga yuboring.</b>\n\n"
         "⚠️ <i>Faqat to‘lovni qilgan shaxsning cheki qabul qilinadi!</i>"
